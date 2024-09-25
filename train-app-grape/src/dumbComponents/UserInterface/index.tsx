@@ -1,6 +1,5 @@
 import React from "react"
 import moment from 'moment';
-import type { RangePickerProps } from 'antd/es/date-picker';
 import { Wrap, CTAWrap, InputWrap } from "./styles/index.tsx"
 import { Input, DatePicker, Button, Form } from "antd"
 import { Dayjs } from 'dayjs';
@@ -24,17 +23,6 @@ const UserInterface: React.FC<MyComponentProps> = ({
     return result;
   };
   
-  // eslint-disable-next-line arrow-body-style
-  const disabledDate: RangePickerProps['disabledDate'] = current => {
-    // Can not select days before today and today
-    return current && current < moment().endOf('day');
-  };
-  
-  const disabledDateTime = () => ({
-    disabledHours: () => range(0, 24).splice(4, 20),
-    disabledMinutes: () => range(30, 60),
-    disabledSeconds: () => [55, 56],
-  });
 
   return (
     <Wrap>

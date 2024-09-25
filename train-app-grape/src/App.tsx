@@ -13,14 +13,16 @@ interface DataType {
 }
 
 function App() {
-  const [travelDate, setTravelDate] = useState("")
+  const [travelDate, setTravelDate] = useState<string>("")
   const [fetching, setFetching] = useState(false)
   const [trainData, setTrainData] = useState<DataType[]>([])
 
   const url = "http://transport.opendata.ch/v1/connections"
 
   const onChange: DatePickerProps['onChange'] = (date, dateString) => {
-    setTravelDate(dateString)
+    if (typeof dateString === 'string') {
+      setTravelDate(dateString);
+    }
   };
 
 
@@ -111,10 +113,10 @@ function App() {
           to: `${connection.to.station.name}`,
           sections,
         })
-
-        setTrainData(results)
-        setFetching(false)
       }
+
+      setTrainData(results)
+      setFetching(false)
       
     } catch(e) {
       console.log("error", e)
