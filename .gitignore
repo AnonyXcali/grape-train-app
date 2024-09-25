@@ -1,0 +1,94 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+build/
+dist/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.log
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+
+# Testing
+coverage/
+*.lcov
+.nyc_output/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local env files
+.envrc
+*.local
+
+# Babel cache
+.babel_cache/
+
+# Webpack cache
+.cache/
+.cache-loader/
+
+# MacOS system files
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary build files
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# JetBrains IDE files
+*.iml
+.idea/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Parcel cache
+.cache/
+
+# Next.js build output
+.next/
+
+# Nuxt.js build output
+.nuxt/
+
+# Storybook build outputs
+out/
+.storybook-out/
+
+# Rollup cache
+.rpt2_cache/
+
+# API keys and credentials
+firebase-debug.log
+firebase-debug.log.*
+firestore.indexes.json
+firestore.rules
+
+# GitHub Actions
+.github/
