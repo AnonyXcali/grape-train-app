@@ -3,11 +3,12 @@ import moment from 'moment';
 import type { RangePickerProps } from 'antd/es/date-picker';
 import { Wrap, CTAWrap, InputWrap } from "./styles/index.tsx"
 import { Input, DatePicker, Button, Form } from "antd"
+import { Dayjs } from 'dayjs';
 
 
 type MyComponentProps = {
-  handleDateChange: () => void
-  handleSubmit: () => void
+  handleDateChange: (date: Dayjs, dateString: string | string[]) => void
+  handleSubmit: (values: Record<string, any>) => void
 };
 
 const UserInterface: React.FC<MyComponentProps> = ({
@@ -73,8 +74,8 @@ const UserInterface: React.FC<MyComponentProps> = ({
              <DatePicker
                 onChange={handleDateChange}
                 format="YYYY-MM-DD HH:mm"
-                disabledDate={disabledDate}
-                disabledTime={disabledDateTime}
+                // disabledDate={disabledDate}
+                // disabledTime={disabledDateTime}
                 showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
               />
           </Form.Item>
