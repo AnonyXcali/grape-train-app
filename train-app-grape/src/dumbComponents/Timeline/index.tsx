@@ -26,7 +26,7 @@ const TimelineComponent: React.FC<MyComponentProps> = ({
           <Timeline.Item>
             <Type><b>{item.type}</b></Type>
             <Station>{`${item.station || ""} ${item.carrierName || ""}`}</Station>
-            <p>{`${item.direction ? `Towards: ${item.direction}` : ""} Time: ${item.time || ""}`}</p>
+            <p>{`${item.direction ? `Towards: ${item.direction}` : ""} ${item.time ? `Time: ${item.time}` : ""}`}</p>
           </Timeline.Item>
         </>
       ))}
